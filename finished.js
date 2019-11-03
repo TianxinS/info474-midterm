@@ -220,6 +220,9 @@
                     else if (color == "Psychic") { return "#79706E"; }
                     else if (color == "Steel") { return "#BAB0AC"; }
                     else if (color == "Water") { return "#D37295"; }
+                    else if (color == "Dragon") { return "#EB1717"; }
+                    else if (color == "Flying") { return "#BF7CF2"; }
+                    else if (color == "Rock") { return "#DEBB5B"; }
                     else { return "#9F9F9F"; }
                 }
 
@@ -287,7 +290,10 @@
             {type: "Poison", color: "#FF9D9A"},
             {type: "Psychic", color: "#79706E"},
             {type: "Steel", color: "#BAB0AC"},
-            {type: "Water", color: "#D37295"}
+            {type: "Water", color: "#D37295"},
+            {type: "Dragon", color: "#EB1717"},
+            {type: "Flying", color: "#BF7CF2"},
+            {type: "Rock", color: "#DEBB5B"}
         ]
 
         var barHeight = 30;
@@ -299,7 +305,7 @@
             .attr("class", "rect")
             .attr("r", 5)
             .attr('x', 650)
-            .attr('y', 50)
+            .attr('y', 0)
             .attr('width', 20)          
             .attr('height', 20)          
             .attr('transform', function(d, i) {            
@@ -309,7 +315,7 @@
 
         legend.append("text")
             .attr("x", 675)
-            .attr("y", 65)
+            .attr("y", 15)
             .attr('transform', function(d, i) {            
                 return "translate(0," + i * barHeight + ")";          
             })
